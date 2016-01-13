@@ -26,6 +26,20 @@ void draw () {
     textSize(20);
     text("Press space to start", 150, 400);
   } else {
-    
+    stroke(0);
+    strokeWeight(2);
+    line(100, 300, 300, 300);
+    line(150, 300, 150, 100);
+    line(150, 100, 275, 100);
+    line(275, 100, 275, 110);
+    w1.update();
+    println(w1.input());
+  }
+}
+void keyPressed () {
+  if (gameon==false) {
+    if (key==' ') {
+      gameon=true;
+    }
   }
 }
