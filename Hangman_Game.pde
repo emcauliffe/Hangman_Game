@@ -24,7 +24,7 @@ void draw () {
     textSize(30);
     text("HANGMAN GAME", 125, 200);
     textSize(20);
-    text("Press space to start", 150, 400);
+    text("Press space", 200, 400);
   } else {
     stroke(0);
     strokeWeight(2);
@@ -33,13 +33,11 @@ void draw () {
     line(150, 100, 275, 100);
     line(275, 100, 275, 110);
     w1.update();
-    println(w1.input());
+    g1.update();
+    c1.update();
+    //println(w1.input());
   }
 }
 void keyPressed () {
-  if (gameon==false) {
-    if (key==' ') {
-      gameon=true;
-    }
-  }
+  k1.update();
 }

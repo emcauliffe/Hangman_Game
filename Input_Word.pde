@@ -11,10 +11,10 @@ class Word {
   }
   void update() {
     line(50, 450, 450, 450);
-    for (int i=1; i<=length; i++) { 
+    for (int i=1; i<length; i++) { 
       stroke(255);
       strokeWeight(4);
-      line(((spaces*i)+54), 445, ((spaces*i)+54), 455);
+      line(((spaces*i)+50), 445, ((spaces*i)+50), 455);
     }
   }
   String input() {
