@@ -32,12 +32,15 @@ void draw () {
     line(150, 300, 150, 100);
     line(150, 100, 275, 100);
     line(275, 100, 275, 110);
-    w1.update();
-    g1.update();
-    c1.update();
+    //w1.update();
+    //g1.update();
+    //c1.update();
     //println(w1.input());
   }
 }
-void keyPressed () {
+void keyReleased () {
   k1.update();
+  w1.update();
+  g1.update();
+  c1.update();
 }
