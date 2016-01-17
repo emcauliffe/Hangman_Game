@@ -7,17 +7,23 @@ class Key {
   void update() {
     if (gameon==false) {
       if (key==' ') {
-        gameon=true;
+        if (w1.howlong<=10) {
+          gameon=true;
+        } else {
+          background(255);
+          stroke(255, 0, 0);
+          text("ERROR:WORD OVER 10 CHARACTERS", 100, 100);
+          noLoop();
+        }
       }
     } else {
+
       if (gameon==true) {
         guessed = guessed+key;
         pressed=key;
         g1.update();
         c1.update();
       }
-      //println(key);
-      //println(guessed);
     }
   }
   String guessed() {

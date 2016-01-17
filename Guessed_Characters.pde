@@ -2,6 +2,7 @@ class Guessed {
   int position;
   int position1;
   int i; //used in for loop
+  int j;
   String positions;
   String positions1;
   boolean yes;
@@ -14,17 +15,51 @@ class Guessed {
     positions="";
     for (i=0; i<=w1.howlong(); i++) {
       position= w1.input().indexOf(k1.pressed);
-      if (w1.input().indexOf(k1.pressed, (position+1))>-1) {
+      positions=str(position);
+      if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
         position= w1.input().indexOf(k1.pressed, position+1);
-        //if (position!=-1) {
-        positions = positions +str(position)+ "," +str(position1);
+        positions =positions +"," +str(position);
+        if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
+          position= w1.input().indexOf(k1.pressed, position+1);
+          positions =positions +"," +str(position);
+          if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
+            position= w1.input().indexOf(k1.pressed, position+1);
+            positions =positions +"," +str(position);
+            if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
+              position= w1.input().indexOf(k1.pressed, position+1);
+              positions =positions +"," +str(position);
+              if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
+                position= w1.input().indexOf(k1.pressed, position+1);
+                positions =positions +"," +str(position);
+                if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
+                  position= w1.input().indexOf(k1.pressed, position+1);
+                  positions =positions +"," +str(position);
+                  if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
+                    position= w1.input().indexOf(k1.pressed, position+1);
+                    positions =positions +"," +str(position);
+                    if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
+                      position= w1.input().indexOf(k1.pressed, position+1);
+                      positions =positions +"," +str(position);
+                      if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
+                        position= w1.input().indexOf(k1.pressed, position+1);
+                        positions =positions +"," +str(position);
+                        if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
+                          position= w1.input().indexOf(k1.pressed, position+1);
+                          positions =positions +"," +str(position);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       } else {
         positions=str(position);
       }
     }
   }
-  //positions = positions + "," +position;
-  //println(k1.pressed(), "   ", k1.guessed(), "   ", g1.poss(), "   ", c1.inyes(), "     ", g1.pos());
   int pos() {
     return position;
   }
