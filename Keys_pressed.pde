@@ -13,6 +13,8 @@ class Key {
       if (gameon==true) {
         guessed = guessed+key;
         pressed=key;
+        g1.update();
+        c1.update();
       }
       //println(key);
       //println(guessed);
@@ -21,7 +23,7 @@ class Key {
   String guessed() {
     return guessed;
   }
-  char pressed(){
+  char pressed() {
     return pressed;
   }
 }
