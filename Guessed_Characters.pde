@@ -18,34 +18,34 @@ class Guessed {
       positions=str(position);
       if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
         position= w1.input().indexOf(k1.pressed, position+1);
-        positions =positions +"," +str(position);
+        positions =positions +str(position);
         if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
           position= w1.input().indexOf(k1.pressed, position+1);
-          positions =positions +"," +str(position);
+          positions =positions +str(position);
           if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
             position= w1.input().indexOf(k1.pressed, position+1);
-            positions =positions +"," +str(position);
+            positions =positions +str(position);
             if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
               position= w1.input().indexOf(k1.pressed, position+1);
-              positions =positions +"," +str(position);
+              positions =positions +str(position);
               if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
                 position= w1.input().indexOf(k1.pressed, position+1);
-                positions =positions +"," +str(position);
+                positions =positions  +str(position);
                 if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
                   position= w1.input().indexOf(k1.pressed, position+1);
-                  positions =positions +"," +str(position);
+                  positions =positions  +str(position);
                   if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
                     position= w1.input().indexOf(k1.pressed, position+1);
-                    positions =positions +"," +str(position);
+                    positions =positions +str(position);
                     if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
                       position= w1.input().indexOf(k1.pressed, position+1);
-                      positions =positions +"," +str(position);
+                      positions =positions +str(position);
                       if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
                         position= w1.input().indexOf(k1.pressed, position+1);
-                        positions =positions +"," +str(position);
+                        positions =positions +str(position);
                         if (w1.input().indexOf(k1.pressed, (position+1))!=-1) {
                           position= w1.input().indexOf(k1.pressed, position+1);
-                          positions =positions +"," +str(position);
+                          positions =positions +str(position);
                         }
                       }
                     }

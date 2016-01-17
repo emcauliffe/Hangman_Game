@@ -3,7 +3,7 @@ Guessed g1;
 Word w1;
 Key k1;
 boolean gameon;
-
+PFont mono;
 void setup () {
   size(500, 500);
   frameRate(144);
@@ -14,6 +14,7 @@ void setup () {
   k1=new Key();//load Keys_pressed class
   gameon=false;
   frameRate(144);
+  mono = createFont("mono.ttf", 93);
 }
 
 void draw () {
@@ -57,12 +58,15 @@ void draw () {
         }
       }
     }
-    //g1.update();
-    //c1.update();
-    //println(w1.input());
+    if (c1.inyes()==true) {
+      text(c1.joined(), 100, 100);
+      //for (int d=0; d<=(g1.poss().length()); d++) {
+      //  text((w1.input().charAt(int(g1.poss().charAt(d)))), (400/w1.howlong()*(g1.poss().charAt(d))), 439);
+      //}
+    }
   }
 }
 void keyReleased () {
   k1.update();
-  println(k1.pressed(), "   ", k1.guessed(), "   ", g1.poss(), "   ", c1.inyes(), "     ", g1.pos(),"     ", c1.part());
+  println(k1.pressed(), "   ", k1.guessed(), "   ", g1.poss(), "   ", c1.inyes(), "     ", g1.pos(), "     ", c1.part());
 }
