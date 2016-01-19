@@ -1,25 +1,19 @@
 class Correct {
-  String[] correct;
-  String joined;
-  boolean yes;
-  int part;
-  int add;
+  String wrong; //string of characters pressed that are not in the 
+  boolean yes; //is ckey pressed in the input word
+  int part; //#of body parts of the hanging man
   Correct() {
     part=0;
+    wrong="Wrong: ";
   }
   void update() {
     if (g1.pos()>-1) {
-      yes = true;
-      add = g1.pos();
-      correct[add] = ""+k1.pressed();
-      joined = join(correct, "");
+      yes = true;              //if the key pressed is in the string, set the boolean to true
     } else {
-      yes = false;
-      part++;
+      yes = false;             //if not set to false
+      wrong = wrong+ k1.pressed();      //add to the wrong string
+      part++;              //and add another body part
     }
-    //for (int w=0; w<=w1.howlong(); w++) {
-
-    //}
   }
   boolean inyes() {
     return yes;
@@ -27,10 +21,7 @@ class Correct {
   int part() {
     return part;
   }
-  String[] correct() {
-    return correct;
-  }
-  String joined() {
-    return joined;
+  String wrong() {
+    return wrong;
   }
 }
