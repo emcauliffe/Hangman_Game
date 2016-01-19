@@ -1,10 +1,10 @@
 class Man {
   
-  boolean lose;
+  boolean isgamelost;
   
   Man() {
     
-    lose=false;
+    isgamelost=false;
     
   }
   
@@ -52,17 +52,17 @@ class Man {
       fill(0);
       textSize(50);
       text("GAME OVER", 97, 364);
-      bletter0=true;
-      bletter1=true;
-      bletter2=true;
-      bletter3=true;          //set all letter variables to true so that the word that you failed to guess appears on screen so you can find out what word it is
-      bletter4=true;
-      bletter5=true;
-      lose=true;    //but you still lost, so I have to make it clear to the rest of the program
+      isletter0correct=true;
+      isletter1correct=true;
+      isletter2correct=true;
+      isletter3correct=true;          //set all letter variables to true so that the word that you failed to guess appears on screen so you can find out what word it is
+      isletter4correct=true;
+      isletter5correct=true;
+      isgamelost=true;    //but you still lost, so I have to make it clear to the rest of the program
     }
   }
   
-  boolean lose() {
-    return lose;      // these are used to communicate with other classes, every time one is called it can return a variable in the coresponding class
+  boolean isgamelost() {
+    return isgamelost;      // these are used to communicate with other classes, every time one is called it can return a variable in the coresponding class
   }
 }

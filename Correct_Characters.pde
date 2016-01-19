@@ -1,7 +1,7 @@
 class Correct {
   
   String wrong; //string of characters pressed that are not in the 
-  boolean yes; //is ckey pressed in the input word
+  boolean ispressedcorrect; //is key pressed in the input word
   int part; //#of body parts of the hanging man
   
   Correct() {
@@ -11,16 +11,16 @@ class Correct {
   
   void update() {
     if (g1.pos()>-1) {
-      yes = true;              //if the key pressed is in the string, set the boolean to true
+      ispressedcorrect = true;              //if the key pressed is in the string, set the boolean to true
     } else {
-      yes = false;             //if not set to false
+      ispressedcorrect = false;             //if not set to false
       wrong = wrong+ k1.pressed();      //add to the wrong string
       part++;              //and add another body part
     }
   }
   
-  boolean inyes() {
-    return yes;
+  boolean ispressedcorrect() {
+    return ispressedcorrect;
   }
   
   int part() {

@@ -5,7 +5,7 @@ class Done {
   
   void update() {
     
-    if (bletter0==true && bletter1==true && bletter2==true && bletter3==true && bletter4==true && bletter5==true && m1.lose()==false) {     //if all the letters are guessed and you haven't lost...
+    if (isletter0correct==true && isletter1correct==true && isletter2correct==true && isletter3correct==true && isletter4correct==true && isletter5correct==true && m1.isgamelost()==false) {     //if all the letters are guessed and you haven't lost...
       
       fill(0);
       stroke(3);
@@ -17,7 +17,7 @@ class Done {
       noLoop();
     }
 
-    if (m1.lose()==true) {
+    if (m1.isgamelost()==true) {
       noLoop(); //but if you lose, game is done
     }
     
